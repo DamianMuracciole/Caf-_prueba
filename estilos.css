@@ -21,8 +21,8 @@ header{
 }
 
 .logo img {
-	max-width: 150px;
-	max-height: 150px;
+	max-width: 130px;
+	max-height: 130px;
 	margin: 10px;
 	float: left;
 }
@@ -71,7 +71,7 @@ header{
 	text-decoration:none;
 	text-align: center;
 	border-right:1px dotted #CCC;
-	width: 200px;
+	width: 180px;
 	height: 70px;
 	line-height: 70px;
 }
@@ -94,7 +94,9 @@ section h3 {
 	padding: 20px;
 	background-color:#1C0A00;
 	margin: 10px;
+	color:#CC9544
 }
+
 .foto_productos{
 	width: 80%;
 	margin-left: 10%;
