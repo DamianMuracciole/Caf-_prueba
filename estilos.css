@@ -1,0 +1,121 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #FAF3E0;
+}
+
+header{
+	background-color: #361500;
+	width: 100%;
+	height: 150px;
+	
+}
+
+.logo{
+	background-color:#361500;
+	float: left;
+}
+
+.logo img {
+	max-width: 150px;
+	max-height: 150px;
+	margin: 10px;
+	float: left;
+}
+
+
+.icono{
+	color: #FAF3E0;
+	font-size: 15px;
+	float: left;
+	margin-left: 3%;
+}
+
+.lupa{
+	float: left;
+	padding: 22px;
+}
+
+.letter{
+	float: left;
+	padding: 22px;
+}
+
+.carrito{
+	float: left;
+	padding: 22px;
+}
+
+
+.botonera {
+	height:70px;
+	float: left;
+}
+
+.botonera ul {
+	list-style-type:none;
+}
+
+.botonera ul li {
+	display: inline;
+}
+
+.botonera ul li a {
+	
+	display: inline-block;
+	color:#CC9544;
+	text-decoration:none;
+	text-align: center;
+	border-right:1px dotted #CCC;
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+}
+	
+.botonera ul li a:hover {
+	background-color:#1C0A00;
+	color:#FAF3E0 ;
+}
+
+.foto_deco{
+	margin-left: 4%;
+	max-width: 80%;
+}
+main{
+	width: 80%;
+	margin: 3% 10%;
+}
+section h3 {
+	text-align: center;
+	padding: 20px;
+	background-color:#1C0A00;
+	margin: 10px;
+}
+.foto_productos{
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+footer {
+	background-color:#361500;
+	color: #CC9544;
+	padding:20px;
+}
+
+
+/*paleta de colores*/
+.color1{color:#1C0A00};
+.color2{color:#361500};
+.color3{color:#603601};
+.color4{color:#CC9544};
+.color5{color:#FAF3E0}
+
+.green_border{
+	border-bottom: rgb(3, 202, 3) 2px  solid;
+}
