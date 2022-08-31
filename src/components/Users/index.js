@@ -27,7 +27,7 @@ function Users(){
                 <p>Nombre: {lastUser.name}</p>
                 <p>Apellido: {lastUser.lastName}</p>
                 <p>Email: {lastUser.email}</p>
-                <p>Url Imagen: {lastUser.image}</p>
+                <p>Url Imagen:{lastUser.image}</p>
                 <hr />
             <h2>Todos los Usuarios</h2>
                      

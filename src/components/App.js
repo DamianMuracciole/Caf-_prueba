@@ -1,6 +1,9 @@
 import '../assets/css/app.css';
+import NavBar from './Navbar';
 import Products from "./Products";
 import Users from "./Users";
+import {Link, Route, Switch} from 'react-router-dom'
+import NotFound from './NotFound';
 
 
 function App() {
@@ -9,15 +12,19 @@ function App() {
       <header>
         <hr />
         <h2> Dashboard CaféArte</h2>
-        <hr />
+        <hr /> 
+          <Link to='/'>Usuarios</Link><br />
+          <Link to='/productos'>Productos</Link><br />
       </header>
       <body>
-        <br />
-        <Users />
-        <br />
-        <hr />
-        <br />
-        <Products />
+        <Switch >
+          {/* <Route path='/' component={Users} exact /> */}
+          <Route path='/' exact >
+            <Users/>
+          </Route>
+          <Route path='/productos' component={Products} />
+          <Route component={NotFound} />
+        </Switch>
       </body>
     </div>
   );
