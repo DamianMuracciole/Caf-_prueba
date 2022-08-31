@@ -1,0 +1,14 @@
+header {
+  background-color: rgb(245, 238, 174);
+}
+
+body {
+
+  text-align: center;
+  font-family: 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
