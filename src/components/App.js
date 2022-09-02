@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <header>
         <hr />
-        <h2> Dashboard CaféArte</h2>
+        <h2 className='text-primary' > Dashboard CaféArte</h2>
         <hr /> 
           <Link to='/'>Usuarios</Link><br />
           <Link to='/productos'>Productos</Link><br />
