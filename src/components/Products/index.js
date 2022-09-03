@@ -24,31 +24,53 @@ function Products(){
 
 
     return(
-        <div>
-            <h2>Cantidad total de Productos</h2>
-            <p>{products.length}</p>
-            <br />
-            <hr />
-            <h2>Total de Categorias de productos</h2>
-            <p>{productsByCategory.length}</p>
-            <hr />
-            <h2>Total de Sesiones de productos</h2>
-            <p>{productsBySession.length}</p>
-            <hr />
-            <h2>Total de Estados de productos</h2>
-            <p>{productsByStatus.length}</p>
-            <hr />
-            <h2>Último producto</h2>
-                <p>Nombre: {lastProduct.name}</p>
-                <p>Detalle: {lastProduct.detail}</p>
-                <p>Categoría: {lastProduct.category}</p>
-                <p>Precio: $ {lastProduct.price}</p>
-                <p>Cantidad: {lastProduct.quantity} unidades</p>
-                <img class="w-100" src={lastProduct.image}></img>
-            <hr />
-            <h2>Todos los productos</h2>
-                     
-            <table className="table-bordered" id="dataTable" width="100%">
+    <div>
+        <div className="row justify-content-evenly">
+
+            <div className="card text-white bg-secondary mb-3 col-2 border-5" >
+                <div className="card-header">Cantidad total de Productos</div>
+                <div className="card-body">
+                    <h5 className="card-title">{products.length}</h5>
+                </div>
+            </div>
+            <div className="card text-white bg-secondary mb-3 col-2 " >
+                <div className="card-header">Total de Categorias de productos</div>
+                <div className="card-body">
+                    <h5 className="card-title">{productsByCategory.length}</h5>
+                </div>
+            </div>
+            <div className="card text-white bg-secondary mb-3 col-2 " >
+                <div className="card-header">Total de Sesiones de productos</div>
+                <div className="card-body">
+                    <h5 className="card-title">{productsBySession.length}</h5>
+                </div>
+            </div>
+
+            <div className="card text-white bg-secondary mb-3 col-2 " >
+                <div className="card-header">Total de Estados de productos</div>
+                <div className="card-body">
+                    <h5 className="card-title">{productsByStatus.length}</h5>
+                </div>
+            </div>
+
+        </div>
+
+        <div className="row justify-content-evenly">
+            <div className="card text-white bg-secondary mb-3 col-8 " >
+            <div className="card-header">Último producto</div>
+                <div className="card-body">{lastProduct.name}</div>
+                
+                <div className="card-body">{lastProduct.detail}</div>
+                <div className="card-body"> {lastProduct.category}</div>
+                <div className="card-body">{lastProduct.price}</div>
+                <div className="card-body">{lastProduct.quantity} unidades </div>
+            </div>
+                <img className="w-75 rounded-3" src={lastProduct.image}></img>
+        </div>    
+        
+        <div className="container border-5 mt-5 mb-2"> 
+            <h2>Todos los productos</h2>           
+            <table className="table" id="dataTable" width="100%">
 				<thead>
                     <tr>
                         <td>Nombre</td>
@@ -69,14 +91,14 @@ function Products(){
                             <td key = {'4'+ index}>{products.price}</td>
                             <td key = {'5'+ index}>{products.quantity}</td>
                             <td key = {'6'+ index}>
-                                <img class="w-25" src={products.image}></img>
+                                <img className="w-25" src={products.image}></img>
                             </td>
                         </tr>
                     )}
 				</tbody>
 			</table>
-
         </div>
+    </div>
     )
 }
 

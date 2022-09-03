@@ -1,30 +1,28 @@
-import '../assets/css/app.css';
-import NavBar from './Navbar';
 import Products from "./Products";
 import Users from "./Users";
-import {Link, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import NotFound from './NotFound';
+import Probando from './Probando';
+import Header from './Header';
+import Footer from './Footer';
 
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <hr />
-        <h2 className='text-primary' > Dashboard CaféArte</h2>
-        <hr /> 
-          <Link to='/'>Usuarios</Link><br />
-          <Link to='/productos'>Productos</Link><br />
-      </header>
+      
       <body>
+        <Header />
         <Switch >
           {/* <Route path='/' component={Users} exact /> */}
           <Route path='/' exact >
             <Users/>
           </Route>
           <Route path='/productos' component={Products} />
+          <Route path='/probando'  component={Probando} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
       </body>
     </div>
   );

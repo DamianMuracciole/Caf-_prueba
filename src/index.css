@@ -1,14 +1,18 @@
 header {
-  background-color: rgb(245, 238, 174);
+  background-color: #542E19
 }
 
 body {
-
   text-align: center;
-  font-family: 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#FEFEFE;
+}
+
+.titulo{
+  color:#FEFEFE;
+  text-decoration: none;
 }
 
 
