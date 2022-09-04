@@ -11,8 +11,12 @@ body {
 }
 
 .titulo{
-  color:#FEFEFE;
+  color:#362300;
   text-decoration: none;
+  margin: 20px auto;
 }
 
-
+.links-sidebar{
+  color:#ffe4b1;
+  text-decoration: none;
+}

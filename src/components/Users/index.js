@@ -47,7 +47,9 @@ function Users(){
                             <td key = {'1'* index}>{user.lastName}</td>
                             <td key = {'2'* index}>{user.name}</td>
                             <td key = {'3'* index}>{user.email}</td>
-                            <td key = {'4'* index}>{user.image}</td>
+                            <td key = {'4+ index'}>
+                                <img className="w-10" src={user.image}></img>
+                            </td>
                         </tr>
                     )}
 				</tbody>

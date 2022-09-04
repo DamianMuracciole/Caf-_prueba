@@ -8,7 +8,7 @@ function Products(){
     const [lastProduct, setLastProduct] = useState([])
 
     useEffect(() => {
-        console.log('%cPasó por Products','color: orange');
+        //console.log('%cPasó por Products','color: orange');
         fetch('/api/products')
         .then(response => response.json())
         .then(data => {
@@ -25,8 +25,8 @@ function Products(){
 
     return(
     <div>
-        <div className="row justify-content-evenly">
-
+        <div className="row justify-content-evenly mt-4 ">
+            <h2></h2>
             <div className="card text-white bg-secondary mb-3 col-2 border-5" >
                 <div className="card-header">Cantidad total de Productos</div>
                 <div className="card-body">
@@ -56,16 +56,17 @@ function Products(){
         </div>
 
         <div className="row justify-content-evenly">
-            <div className="card text-white bg-secondary mb-3 col-8 " >
-            <div className="card-header">Último producto</div>
-                <div className="card-body">{lastProduct.name}</div>
-                
-                <div className="card-body">{lastProduct.detail}</div>
-                <div className="card-body"> {lastProduct.category}</div>
-                <div className="card-body">{lastProduct.price}</div>
-                <div className="card-body">{lastProduct.quantity} unidades </div>
+            <div className="card text-white bg-secondary mb-3 col-4">
+                <div className="card-header">Último producto</div>
+                <div>
+                    <div className="card-body ">{lastProduct.name}</div>
+                    <div className="card-body">{lastProduct.detail}</div>
+                    <div className="card-body"> {lastProduct.category}</div>
+                    <div className="card-body">{lastProduct.price}</div>
+                    <div className="card-body">{lastProduct.quantity} unidades </div>
+                    <img className="w-25 rounded-3 mb-3 " src={lastProduct.image}></img>
+                </div>
             </div>
-                <img className="w-75 rounded-3" src={lastProduct.image}></img>
         </div>    
         
         <div className="container border-5 mt-5 mb-2"> 
