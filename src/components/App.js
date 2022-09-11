@@ -1,6 +1,6 @@
+import {Route, Switch} from 'react-router-dom'
 import Products from "./Products";
 import Users from "./Users";
-import {Route, Switch} from 'react-router-dom'
 import NotFound from './NotFound';
 import Probando from './Probando';
 import SideBar from './SideBar';
@@ -9,11 +9,9 @@ import Main from './Main'
 import './App.css'
 
 
-
 function App() {
   return (
-    <div className="g-0">
-      
+    <div className='App'>
       <body>
         <div className="row h-auto mb-0">
           <div className="col-2 d-flex">
