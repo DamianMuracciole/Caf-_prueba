@@ -17,6 +17,31 @@ body {
 }
 
 .links-sidebar{
-  color:#ffe4b1;
+  color:#faf3e0;
   text-decoration: none;
+  transition-duration: 300ms;
+}
+
+.links-sidebar:hover{
+  background: #1C0A00;
+  color: #CC9544;
+  text-decoration: none;
+  max-width: 85%;
+  margin-left: 15%;
+  border-radius: 5%;
+  transition-duration: 300ms;
+}
+
+.links-sidebar:focus{
+  color: #CC9544;
+  max-width: 85%;
+  margin-left: 15%;
+}
+
+/* paletas de colores */
+.paleta_de_colores{
+color: #faf3e0;
+color: #CC9544;
+color:#361500;
+color: #1C0A00;
 }

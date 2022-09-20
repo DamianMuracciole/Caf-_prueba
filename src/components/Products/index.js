@@ -17,7 +17,6 @@ function Products(){
             setProductsByCategory(data.productsByCategory);
             setProductsBySession(data.productsBySession);
             setProductsByStatus(data.productsByStatus);
-            console.log(lastProduct);
         })
         .catch(error => console.log(error));
     },[])
@@ -34,13 +33,13 @@ function Products(){
                 </div>
             </div>
             <div className="card text-white bg-secondary mb-3 col-2 " >
-                <div className="card-header">Total de Categorias de productos</div>
+                <div className="card-header">Total de Categorias</div>
                 <div className="card-body">
                     <h5 className="card-title">{productsByCategory.length}</h5>
                 </div>
             </div>
             <div className="card text-white bg-secondary mb-3 col-2 " >
-                <div className="card-header">Total de Sesiones de productos</div>
+                <div className="card-header">Total de Sesiones</div>
                 <div className="card-body">
                     <h5 className="card-title">{productsBySession.length}</h5>
                 </div>
@@ -97,7 +96,24 @@ function Products(){
                         </tr>
                     )}
 				</tbody>
+
+                
 			</table>
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
     </div>
     )

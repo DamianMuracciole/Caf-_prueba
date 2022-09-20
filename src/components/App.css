@@ -1,11 +1,7 @@
-.App {
-  text-align: center;
-}
-
 .min-vh{
-  min-height: 88vh;
+  min-height: 85vh;
 }
 
 .foot-vh{
-  min-height: 1em;
+  min-height: 0em;
 }

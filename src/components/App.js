@@ -1,9 +1,9 @@
-import {Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Products from "./Products";
 import Users from "./Users";
 import NotFound from './NotFound';
-import Probando from './Probando';
-import SideBar from './SideBar';
+// import { Probando }from './Probando';
+import { SideBar } from './SideBar';
 import Footer from './Footer';
 import Main from './Main'
 import './App.css'
@@ -11,8 +11,8 @@ import './App.css'
 
 function App() {
   return (
-    <div className='App'>
-      <body>
+    <div>
+      {/* <body> */}
         <div className="row h-auto mb-0">
           <div className="col-2 d-flex">
             <SideBar />
@@ -28,7 +28,7 @@ function App() {
                 </Route>
                 <Route path='/productos' component={Products} />
                 <Route path='/usuarios' component={Users} />
-                <Route path='/probando'  component={Probando} />
+                {/* <Route path='/probando'  component={Probando} /> */}
                 <Route component={NotFound} />
               </Switch>
             </div>
@@ -41,7 +41,7 @@ function App() {
           
         </div>
         
-      </body>
+      {/* </body> */}
     </div>
   );
 }

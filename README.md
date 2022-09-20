@@ -1,6 +1,6 @@
-# Aplicacion adicional del proyecto CAféArte
+# Aplicacion adicional del proyecto CaféArte
 
-Este mismo utiliza REact y Bootstrap para su desarrollo
+Este mismo utiliza React y Bootstrap para su desarrollo
 
 ## Comandos propios de React
 
