@@ -12,7 +12,6 @@ function Users(){
         .then(data => {
             setUsers(data.usuarios)
             setLastUser(data.usuarios[(data.usuarios.length -1)])
-            console.log("%cUsuarios: ", "color: blue", data.usuarios[(data.usuarios.length -1)]);
         })
         .catch(error => console.log(error));
     },[])
@@ -48,7 +47,7 @@ function Users(){
                             <td key = {'2'* index}>{user.name}</td>
                             <td key = {'3'* index}>{user.email}</td>
                             <td key = {'4+ index'}>
-                                <img className="w-10" src={user.image}></img>
+                                <img className="w-25" src={user.image} alt='imagen usuario'></img>
                             </td>
                         </tr>
                     )}

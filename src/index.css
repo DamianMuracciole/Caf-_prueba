@@ -30,6 +30,7 @@ body {
   margin-left: 15%;
   border-radius: 5%;
   transition-duration: 300ms;
+  box-shadow: 0px 0px 4px #1C0A00;
 }
 
 .links-sidebar:focus{
@@ -42,6 +43,31 @@ body {
 .paleta_de_colores{
 color: #faf3e0;
 color: #CC9544;
+color: #542E19;
 color:#361500;
 color: #1C0A00;
+}
+
+.shadow-card{
+  box-shadow: 0px 0px 4px #725545ec;
+}
+
+.colores-nav{
+  color:#361500;
+  border-color: #361500;
+}
+.colores-nav:hover{
+  background-color: #CC9544;
+  color: #1C0A00;
+}
+
+.colores-num-nav{
+  background-color: #CC9544;
+  color:#361500;
+  border-color: #36150080;
+}
+.colores-num-nav:hover{
+  color: #CC9544;
+  background-color:#361500;
+  border-color: #36150080;
 }

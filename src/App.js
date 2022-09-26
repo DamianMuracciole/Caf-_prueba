@@ -1,12 +1,16 @@
+//Librerias
+import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import Products from "./Products";
-import Users from "./Users";
-import NotFound from './NotFound';
-// import { Probando }from './Probando';
-import { SideBar } from './SideBar';
-import Footer from './Footer';
-import Main from './Main'
+//Estilos
 import './App.css'
+//Componentes
+import Products from "./components/Products";
+import Users from "./components/Users";
+import NotFound from './components/NotFound';
+import { SideBar } from './components/SideBar';
+import Footer from './components/Footer';
+import Main from './components/Main'
+
 
 
 function App() {
@@ -24,7 +28,7 @@ function App() {
               <Switch >
                 {/* <Route path='/' component={Users} exact /> */}
                 <Route path='/' exact >
-                  <Main/>
+                  <Main />
                 </Route>
                 <Route path='/productos' component={Products} />
                 <Route path='/usuarios' component={Users} />

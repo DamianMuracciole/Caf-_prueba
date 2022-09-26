@@ -1,0 +1,46 @@
+.min-vh{
+  min-height: 85vh;
+}
+
+.foot-vh{
+  min-height: 0em;
+}
+
+.notFoundStyle{
+  width: 95%;
+
+  margin: 1.5%;
+}
+
+.bg-cafeArte {
+  background-color: #542E19;
+}
+
+.text-CafeArte {
+  color: #faf3e0;
+}
+
+.card-cafeArte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid #1C0A00;
+  border-radius:0.375rem;
+}
+
+.card-body-cafeArte {
+  flex: 1 1 auto;
+  padding: 1rem;
+  color:#faf3e0;
+}
+
+.card-header-cafeArte {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  color:#faf3e0;
+  background-color: #542E19;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}

@@ -1,10 +1,10 @@
 import React from 'react'
-import notFound from '../../assets/images/404-not-found-wallpaper-preview.jpg'
+import notFound from '../../assets/images/error404.jpg'
 
 const NotFound = () => {
   return (
     <div>
-      <img src={notFound}></img>
+      <img className='notFoundStyle' src={notFound} alt='error 404 URL not found' ></img>
     </div>
   )
 }
