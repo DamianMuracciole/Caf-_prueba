@@ -1,9 +1,7 @@
-import React from 'react';
-
-const DataProducts = (props) => {
+const DataProducts = ({dataProducts, loadingProducts}) => {
   
-  let productsObject;
-  let cantidadTotalProductos;
+  let productsDetails;
+  let totalProducts;
   let totalCategory;
   let totalSessions;
   let totalStatus; 
@@ -17,15 +15,15 @@ const DataProducts = (props) => {
   // console.log(props.total);
   
   
-    productsObject = props.dataProducts.productos;
-    cantidadTotalProductos = props.dataProducts.total;
-  if (!props.loadingProducts)  {
-    totalCategory = props.dataProducts.productsByCategory.length;
-    totalSessions = props.dataProducts.productsBySession.length;
-    totalStatus   = props.dataProducts.productsByStatus.length;
+    productsDetails = dataProducts.productos;
+    totalProducts = dataProducts.total;
+  if (!loadingProducts)  {
+    totalCategory = dataProducts.productsByCategory.length;
+    totalSessions = dataProducts.productsBySession.length;
+    totalStatus   = dataProducts.productsByStatus.length;
     
   }
-  return {productsObject, cantidadTotalProductos, totalCategory,totalSessions,totalStatus}
+  return {productsDetails, totalProducts, totalCategory,totalSessions,totalStatus}
 } 
 
 export default DataProducts;

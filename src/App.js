@@ -25,8 +25,10 @@ function App() {
   //Consultas a la Api
   const {dataProducts,loadingProducts} = useFetchProducts('/api/products');
   const {dataUsers,loadingUsers} = useFetchUsers('/api/users');
-  const {productsObject, cantidadTotalProductos, totalCategory,totalSessions,totalStatus} = DataProducts({dataProducts, loadingProducts});
+  const {productsDetails, totalProducts} = DataProducts({dataProducts, loadingProducts});
   const {cantidadTotalUsuarios} = DataUsers({dataUsers,loadingUsers});
+
+  // console.log(dataProducts.productsByCategory.length);
 
   return (
     <>
@@ -42,33 +44,29 @@ function App() {
               <Switch >
                 {/* <Route path='/' component={Users} exact /> */}
                 <Route path='/' exact >
-                  <Main 
-                    cantidadProductos = {cantidadTotalProductos} 
+                  <Main
+                    cantidadProductos = {totalProducts}
                     cantidadUsuarios  = {cantidadTotalUsuarios}
                     loadingProducts   = {loadingProducts}
-                    loadingUsers      = {loadingUsers} 
+                    loadingUsers      = {loadingUsers}
                   />
                 </Route>
                 <Route path='/productos'>
-                  <Products 
-                    products          = {productsObject} 
-                    cantidadProductos = {cantidadTotalProductos} 
-                    totalCategory     = {totalCategory}
-                    totalSessions     = {totalSessions}
-                    totalStatus       = {totalStatus}
+                  <Products
+                    products          = {dataProducts}
                     loadingProducts   = {loadingProducts}
                   />
                 </Route>
                 <Route path='/ultimoProducto'>
-                  <ProductsPerUnity 
-                    products        = {productsObject}
+                  <ProductsPerUnity
+                    products        = {productsDetails}
                     loadingProducts = {loadingProducts}
                   />
                 </Route>
                 <Route path='/listadoProductos'>
                   <ProductList
-                    products        = {productsObject}
-                    loadingProducts = {loadingProducts} 
+                    products        = {productsDetails}
+                    loadingProducts = {loadingProducts}
                   />
                 </Route>
 
@@ -76,15 +74,15 @@ function App() {
                 <Route component={NotFound} />
               </Switch>
             </div>
-          
+
             <div>
               <hr />
               <Footer />
             </div>
           </div>
-          
+
         </div>
-        
+
       {/* </body> */}
     </>
   );

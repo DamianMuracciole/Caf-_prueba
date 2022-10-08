@@ -8,11 +8,11 @@ export function SideBar() {
 
         <div><Link to='/' className='links-sidebar py-3 d-block'>Home </Link><br/></div>
                   
-        <div className='links-sidebar py-3 d-block' data-bs-toggle="collapse" data-bs-target="#productos" aria-expanded="false" aria-controls="productos" role="button">Productos</div>
+        <div className='links-sidebar py-3 d-block' data-bs-toggle="collapse" data-bs-target="#productos" aria-expanded="false" aria-controls="productos">Productos</div>
 
         <div className="row">
           <div className="col">
-            <div id="productos">
+            <div id="productos" className="collapse multi-collapse" >
               <div><Link to='/productos' className='links-sidebar py-3 d-block'>Estadisticas</Link><br/></div>
               <div><Link to='/ultimoProducto' className='links-sidebar py-3 d-block'>Ultimo producto</Link><br/></div>
               <div><Link to='/listadoProductos' className='links-sidebar py-3 d-block'>Listado de productos</Link><br/></div>                 
