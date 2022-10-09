@@ -16,6 +16,15 @@
   background-color: #542E19;
 }
 
+.colors{
+color: rgba(250, 243, 224, 1);
+color: rgba(204, 150, 69, 1);
+color: rgba(84, 46, 25, 1);
+color:rgba(54, 21, 0, 1);
+color: rgba(28, 10, 0, 1);
+color: rgba(119, 64, 34, 1);
+}
+
 .text-CafeArte {
   color: #faf3e0;
 }
@@ -43,4 +52,19 @@
   color:#faf3e0;
   background-color: #542E19;
   border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+.numero{
+  font-size: 0.8rem;
+}
+
+.numero-style{
+  border: 1px solid  #1C0A00 ;
+  border-radius: 5px;
+}
+
+.numero-style-number{
+  border: 1px solid  #1C0A00 ;
+  border-radius: 5px;
+  background-color:rgba(204, 150, 69, 1);
+  color:#faf3e0;
 }

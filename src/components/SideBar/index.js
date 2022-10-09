@@ -12,9 +12,9 @@ export function SideBar() {
 
         <div className="row">
           <div className="col">
-            <div id="productos" className="collapse multi-collapse" >
-              <div><Link to='/productos' className='links-sidebar py-3 d-block'>Estadisticas</Link><br/></div>
-              <div><Link to='/ultimoProducto' className='links-sidebar py-3 d-block'>Ultimo producto</Link><br/></div>
+            <div id="productos"                 className="collapse multi-collapse" >
+              <div><Link to='/productos'        className='links-sidebar py-3 d-block'>Estadisticas</Link><br/></div>
+              <div><Link to='/ultimoProducto'   className='links-sidebar py-3 d-block'>Ultimo producto</Link><br/></div>
               <div><Link to='/listadoProductos' className='links-sidebar py-3 d-block'>Listado de productos</Link><br/></div>                 
             </div>
           </div>
@@ -25,7 +25,8 @@ export function SideBar() {
         <div className="row">
           <div className="col">
             <div className="collapse multi-collapse" id="usuarios">
-              <div><Link to='/usuarios'  className='links-sidebar py-3 d-block' >Usuarios</Link><br/></div>
+              <div><Link to='/ultimoUsuario'  className='links-sidebar py-3 d-block' >Ultimo usuario</Link><br/></div>
+              <div><Link to='/usuarios'       className='links-sidebar py-3 d-block' >Usuarios</Link><br/></div>            
             </div>
           </div>
         </div>

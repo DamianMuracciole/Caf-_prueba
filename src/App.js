@@ -16,7 +16,8 @@ import Main from './components/Main'
 import Products from "./components/Products";
 import ProductsPerUnity from './components/ProductsPerUnity';
 import ProductList from './components/ProductList'
-import Users from "./components/Users";
+import UserList from "./components/UserList";
+import LastUser from './components/LastUser'
 import NotFound from './components/NotFound';
 
 import Footer from './components/Footer';
@@ -27,8 +28,6 @@ function App() {
   const {dataUsers,loadingUsers} = useFetchUsers('/api/users');
   const {productsDetails, totalProducts} = DataProducts({dataProducts, loadingProducts});
   const {cantidadTotalUsuarios} = DataUsers({dataUsers,loadingUsers});
-
-  // console.log(dataProducts.productsByCategory.length);
 
   return (
     <>
@@ -70,7 +69,21 @@ function App() {
                   />
                 </Route>
 
-                <Route path='/usuarios' component={Users} />
+                <Route path='/usuarios' >
+                  <UserList 
+                    users = {dataUsers.usuarios}
+                    loadingUsers = {loadingUsers}
+                  />
+                </Route>   
+
+                
+                <Route path='/ultimoUsuario' >
+                  <LastUser
+                    users = {dataUsers.usuarios}
+                    loadingUsers = {loadingUsers} 
+                  />
+                </Route>   
+
                 <Route component={NotFound} />
               </Switch>
             </div>
