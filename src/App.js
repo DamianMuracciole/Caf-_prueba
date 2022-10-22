@@ -30,13 +30,15 @@ function App() {
   const {cantidadTotalUsuarios} = DataUsers({dataUsers,loadingUsers});
 
   return (
-    <>
+    <div className="">
       {/* <body> */}
-        <div className="row h-auto mb-0">
-          <div className="col-2 d-flex">
+        <div className="row h-50 mb-0">
+          <div className="col-md-3 col-lg-2 d-none d-md-block d-md-flex">
             <SideBar />
           </div>
-          <div className="col-10 mb-0">
+          <div className="d-block d-sm-none col-1" />
+          <div className="d-none d-sm-block d-md-none col-1" />
+          <div className="col-10 col-md-9 col-lg-10 mb-0">
             <div className="min-vh" >
               <h2 className='titulo'> Dashboard CaféArte</h2>
               <hr />
@@ -97,7 +99,7 @@ function App() {
         </div>
 
       {/* </body> */}
-    </>
+    </div>
   );
 }
 
