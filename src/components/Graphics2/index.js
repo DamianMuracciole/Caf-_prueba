@@ -1,8 +1,8 @@
 import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 // color: rgba(250, 243, 224, 1);
 // color: rgba(204, 150, 69, 1);
@@ -20,7 +20,6 @@ function Graphics ({title, total, datos}){
     labels: claves,
     datasets: [
       {
-        label: title,
         data: valores,
         backgroundColor: [
           'rgba(250, 243, 224, 0.95)',
@@ -44,34 +43,32 @@ function Graphics ({title, total, datos}){
     ],
   };
 
-  // if (products){
-  //   const cafeMolido = products.filter(product => product.category === "Molido");
-  //   const granos = products.filter(product => product.category === "En Granos");
-  //   const capsulas = products.filter(product => product.category === "Capsulas");
-  //   const alfajores = products.filter(product => product.category === "Alfajores");
-  //   const chocolates = products.filter(product => product.category === "Chocolates");
-  //   const cookies = products.filter(product => product.category === "Cookies");
-  //   const enVenta = products.filter(product => product.status === "A");
-  //   const destacado = enVenta.filter(product => product.session === "Destacado");
-  //   const oferta = enVenta.filter(product => product.session === "Oferta");
-  //   const normal= enVenta.filter(product => product.session === "Normal");
-  //   data.datasets.data = [cafeMolido.length, granos.length, capsulas.length, alfajores.length, chocolates.length, cookies.length];
-  //   data.labels = ['cafeMolido', 'granos', 'capsulas', 'alfajores', 'chocolates', 'cookies']
-  //   data2.datasets.data = [enVenta.length, products.length - enVenta.length];
-  //   data2.labels = ['En Venta','Descartado'];
-
-  //   data5.datasets.data = [26, 4, 26];
-  //   //data3.datasets.data = [destacado.length, oferta.length, normal.length];
-  //   data5.labels = ['Destacado','En Oferta','Sin destacar'];
-  //   console.log(products)
-   
-  // }
- 
+  const options = {
+    plugins: {
+      title: {
+        display: true,
+        text: title,
+        color: 'rgba(28, 10, 0, 1)',
+        font: {size: 22,family: 'Poppins',weight: 500},
+        fullSize: true
+      },
+      legend: {
+        display: true,
+        position: 'bottom',
+        align: 'center',
+     }
+    }
+  }
   
   return(
     <>
-      <h5>{title}</h5>
-      <Doughnut data={data} />
+      {/* <h5>{title}</h5> */}
+      <hr />
+      <Doughnut 
+        data={data} 
+        options={options}
+      />
+      
     </>
   )
 }

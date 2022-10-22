@@ -44,6 +44,23 @@ function Graphics ({title, total, datos}){
     ],
   };
 
+  const options = {
+    plugins: {
+      title: {
+        display: true,
+        text: title,
+        color: 'rgba(28, 10, 0, 1)',
+        font: {size: 22,family: 'Poppins',weight: 500},
+        fullSize: true
+      },
+      legend: {
+        display: true,
+        position: 'bottom',
+        align: 'center',
+     }
+    }
+  }
+
   // if (products){
   //   const cafeMolido = products.filter(product => product.category === "Molido");
   //   const granos = products.filter(product => product.category === "En Granos");
@@ -70,8 +87,12 @@ function Graphics ({title, total, datos}){
   
   return(
     <>
-      <h5>{title}</h5>
-      <Doughnut data={data} />
+      {/* <h5>{title}</h5> */}
+      <hr />
+      <Doughnut 
+        data={data} 
+        options={options}
+      />
     </>
   )
 }

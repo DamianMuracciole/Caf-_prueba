@@ -41,8 +41,8 @@ function Products ({products, loadingProducts}) {
         </div>
 
         <div className="row">
-          <div className="col-4" />
-          <div className="col-4" >
+          <div className="col-3" />
+          <div className="col-6" >
             <Graphics 
               title = "Por categoria"
               total = {products.total}
@@ -52,8 +52,8 @@ function Products ({products, loadingProducts}) {
           </div>
         </div>
         <div className="row">
-          <div className="col-4" />
-          <div className="col-4" >
+          <div className="col-3" />
+          <div className="col-6" >
             <Graphics2 
               title = "Por Sesiones"
               total = {products.total}
@@ -63,8 +63,8 @@ function Products ({products, loadingProducts}) {
           </div>
         </div>
         <div className="row">
-          <div className="col-4" />
-          <div className="col-4" >
+          <div className="col-3" />
+          <div className="col-6" >
             <Graphics2 
               title = "Por Estado"
               total = {products.total}
